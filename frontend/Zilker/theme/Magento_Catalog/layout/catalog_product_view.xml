@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<body>
+    	<referenceContainer name="product.info.main">
+    		<block name="extended_desc" class="Magento\Catalog\Block\Product\View\Attributes" template="Magento_Catalog::product/desc.phtml" as="additional" before="-">
+				<arguments>
+                    <argument translate="true" name="title" xsi:type="string">More Information</argument>
+                </arguments>
+			</block>
+		</referenceContainer>
+	</body>
+</page>

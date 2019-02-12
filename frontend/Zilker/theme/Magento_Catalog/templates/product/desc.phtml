@@ -1,0 +1,49 @@
+
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+?>
+
+<?php
+    //simple text
+?>
+<hr>
+<p><strong> This is custom text about product from html page</strong></p>
+
+
+
+<?php
+    //display Custom Block Content(Block Id: custom_block)
+    echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('custom_block')->toHtml();
+?>
+
+
+
+<?php
+/**
+ * Product additional attributes template
+ *
+ * @var $block \Magento\Catalog\Block\Product\View\Attributes
+ */
+?>
+<?php
+    $_helper = $this->helper('Magento\Catalog\Helper\Output');
+    $_product = $block->getProduct();
+?>
+
+<?php if ($_additional = $block->getAdditionalData()): ?>
+    <?php
+        //  echo "<pre>";var_dump($_additional);echo "</pre>";   
+    ?>
+    <?php if (array_key_exists("sales",$_additional) && $_additional['sales']['value']!="No"): ?>
+        <div style="margin: 20px 0px">
+            <b>Sales: </b><?= $_additional['sales']['value'] ?>
+        </div>
+    <?php endif;?>
+<?php endif;?>
+
+<hr>
