@@ -23,27 +23,23 @@
 
 
 
+
 <?php
-/**
- * Product additional attributes template
- *
- * @var $block \Magento\Catalog\Block\Product\View\Attributes
- */
-?>
-<?php
-    $_helper = $this->helper('Magento\Catalog\Helper\Output');
     $_product = $block->getProduct();
 ?>
 
-<?php if ($_additional = $block->getAdditionalData()): ?>
-    <?php
-        //  echo "<pre>";var_dump($_additional);echo "</pre>";   
-    ?>
-    <?php if (array_key_exists("sales",$_additional) && $_additional['sales']['value']!="No"): ?>
+<?php if ($_product->getShortDescription()): ?>
         <div style="margin: 20px 0px">
-            <b>Sales: </b><?= $_additional['sales']['value'] ?>
+            <b>Short Description </b><br>
+            <?= $_product->getShortDescription() ?>
         </div>
-    <?php endif;?>
+<?php endif;?>
+
+
+<?php if ($_product->getAttributeText('sales')): ?>
+        <div style="margin: 20px 0px">
+            <b>Sales: </b><?= $_product->getAttributeText('sales') ?>
+        </div>
 <?php endif;?>
 
 <hr>
