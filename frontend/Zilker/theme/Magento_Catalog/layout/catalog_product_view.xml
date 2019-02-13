@@ -7,12 +7,30 @@
 		</referenceContainer>
 		
 		<referenceBlock name="product.info.details">
-				<block class="Magento\Cms\Block\Block" name="shiping.info.content" group="detailed_info" before="product.info.details">
+				<block class="Magento\Cms\Block\Block" name="shiping.info.content" group="detailed_info" >
 					<arguments>
 						<argument translate="true" name="title" xsi:type="string">Shiping Information</argument>
 						<argument name="block_id" xsi:type="string">shiping_info</argument>
+						<argument name="priority" xsi:type="string">1</argument>
 					</arguments>
 				</block>
-		</referenceBlock> 
+		</referenceBlock>
+		
+		<referenceBlock name="product.info.description">
+            <arguments>
+                <argument name="priority" xsi:type="string">2</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock name="product.attributes">
+            <arguments>
+                <argument name="priority" xsi:type="string">3</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock name="reviews.tab">
+            <arguments>
+                <argument name="priority" xsi:type="string">4</argument>
+            </arguments>
+        </referenceBlock> 
+
 	</body>
 </page>
