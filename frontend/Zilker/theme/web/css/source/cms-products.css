@@ -1,0 +1,13 @@
+.product-items .slick-list{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.block-products-list{
+    margin-top: 5%;
+} 
+
+.products-grid .product-item-info:hover{
+    box-shadow: none;
+    padding: unset;
+}

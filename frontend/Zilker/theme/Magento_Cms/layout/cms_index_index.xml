@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="css/source/slick-theme.css"/>
+        <css src="css/source/slick.css"/>
+        <css src="css/source/layout.css"/>
+        <css src="css/source/banner-slider.css"/>
+        <css src="css/source/products-slider.css"/>
+        <css src="css/source/promotional-product.css"/>
+        <css src="css/source/cms-products.css"/>
+    </head>
+    <body>
+        <referenceContainer name="main" >
+                <block name="banner"   template="Magento_Cms::homepage.phtml" before="-">
+                </block>
+
+                <block name="promotional.product"   template="Magento_Cms::promotionalProduct.phtml" after="banner">
+                </block>
+        </referenceContainer>
+    </body>
+</page>

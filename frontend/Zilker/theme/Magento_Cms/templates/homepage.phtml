@@ -1,0 +1,31 @@
+
+<script>
+    require(['jquery','slick'],function($){
+        jQuery(document).ready(function(){
+            console.log('hi');
+            $('.slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            speed: 300,
+            arrows: true,
+            dots: true,
+            centerMode: true,
+            prevArrow:'<span class="slick-prev custom-slick-prev"></span>',
+            nextArrow:'<span class="slick-next custom-slick-next"></span>',
+            infinite:false,
+            fade:true,
+            });
+        });        
+    });
+    
+</script>
+
+
+
+<div class="slider">
+   <?php 
+         //Branding Images
+    echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('banner_images')->toHtml();
+   ?>
+</div>
+

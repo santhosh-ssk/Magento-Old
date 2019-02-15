@@ -1,0 +1,31 @@
+.slick-prev{
+    left: 0px;
+}
+.slick-next{
+    right: 0px;
+    transform: translate(0%,0%);
+   
+}
+.slick-prev,.slick-prev:hover, .slick-next ,.slick-next:hover{
+    height: 8vh;
+    width:  60px;
+    background-size: 100% 100%;
+    background-image: url('../../images/right-black-arrow.png');  
+    opacity: 0.4;
+    border: none;
+    z-index: 2;
+     top: 20%;
+}
+.slick-prev ,.slick-prev:hover
+{
+    transform: rotate(180deg);
+}
+
+.slick-prev:hover,.slick-next:hover{
+    opacity: 1.0;
+    border: 0px solid white;
+}
+
+.slick-prev::before,.slick-next::before{
+    content: '';
+} 
