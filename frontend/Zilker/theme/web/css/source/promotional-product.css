@@ -1,0 +1,103 @@
+.promotional-product{
+    height: 32vh;
+    margin-top: 5%;
+    position: relative;
+    background-color: #f3f3f3;
+     line-height: 32vh;   
+}
+.promotional-product > div{
+     height: 100%;
+     vertical-align: middle;  
+
+}
+.promotional-product-image{
+    width: 25%;
+    float: left;
+}
+.promotional-product-image img{
+    /* background-color: blue; */
+    height:  15vw;
+    vertical-align: middle;
+    
+}
+.promotional-product-title{
+    float: left;
+    font-size: 22px;
+    font-weight: bold;
+    width: 50%;
+    line-height: 20px;
+}
+.promotional-product-title > div{
+    position: relative;
+    top: 50%;
+    transform: translate(0%,-50%);
+}
+.promotional-product-button-content{
+    float: left;
+    width: 25%;
+   
+}
+.promotional-product-button-content .promotional-product-button{
+    background-color: #101010;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    opacity: 0.7;
+    box-sizing: border-box;
+    width: 60%;
+    margin-left: 20%;
+       
+}
+
+.promotional-product-button:hover{
+    opacity: 1.0;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+    .promotional-product{
+        height: 20vh;
+        line-height: 20vh;
+    }    
+    .promotional-product-title{
+        font-size: 12px;
+        width: 45%;
+    }
+    .promotional-product-button-content{
+        width: 25%;
+    }
+    .promotional-product-button-content .promotional-product-button
+    {
+        font-size: 12px;
+        padding: 8px 2px;
+        width: 98%;
+        margin-left: 0%;
+        box-sizing: border-box;
+    }
+} 
+
+
+/* tablets (landscape tablets, 768px and up)*/ 
+@media  (min-width: 600px) and (max-width: 1023px){
+    .promotional-product-title{
+        font-size: 17px;
+    }
+    .promotional-product-button-content .promotional-product-button
+    {
+        padding: 8px 8px;
+        width: 65%;
+        margin-left: 10%;
+    }
+} 
+
+/* Large devices (laptops/desktops, 992px and up)*/ 
+@media (min-width: 1024px)  and (max-width: 1190px){
+    .promotional-product-title{
+        font-size: 20px;
+    }
+    .promotional-product-button-content .promotional-product-button{
+        padding: 12px 10px;
+    }
+}  

@@ -1,0 +1,44 @@
+.slick-prev{
+    left: -10px;
+}
+.slick-next{
+    right: 0px;
+    transform: translate(0%,0%);
+}
+.slick-prev,.slick-prev:hover, .slick-next ,.slick-next:hover{
+    height: 8vh;
+    width:  60px;
+    background-size: 100% 100%;
+    background-image: url('../../images/right-black-arrow.png');  
+    opacity: 0.4;
+    border: none;
+    z-index: 2;
+     top: 20%;
+}
+.slick-prev ,.slick-prev:hover
+{
+    transform: rotate(180deg);
+}
+
+.slick-prev:hover,.slick-next:hover{
+    opacity: 1.0;
+    border: 0px solid white;
+}
+
+.slick-prev::before,.slick-next::before{
+    content: '';
+} 
+.slick-arrow.slick-disabled,.slick-arrow.slick-disabled:hover{
+    opacity: 0;
+    cursor: default;
+}
+/* Extra small devices (phones) */
+@media (max-width: 756px) {
+    .slick-next{
+        right: -15px;
+    }
+    .column.main .product-items{
+        margin-left: unset;
+    }
+
+} 

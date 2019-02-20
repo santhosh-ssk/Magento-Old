@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css  src="css/source/bootstrap.css"/>
+        <css  src="css/source/footer.css"/>
+        <css  src="https://use.fontawesome.com/releases/v5.7.2/css/all.css" src_type="url"/>
+        <script src="js/footer.js"/>
+    </head>
+    <body>
+        <referenceContainer name="footer" remove="true"></referenceContainer>
+        <referenceContainer name="footer-container" >
+           <container   name ="custom.footer"  htmlTag="div" htmlClass="footer container" htmlId="footer">
+                <container   name ="custom.footer.coloumn-1"  htmlTag="div" htmlClass="col col-lg-3 col-md-12 col-sm-12 full-height">
+                    <container   name ="custom.footer.coloumn-1.row-1"  htmlTag="div" htmlClass="row demco_logo" >
+                        <block   name="footer.content.logo"   class="Magento\Cms\Block\Block">
+                            <arguments>
+						        <argument name="block_id" xsi:type="string">demco_logo</argument>
+						    </arguments>
+                        </block>
+                    </container>
+                    <container   name ="custom.footer.coloumn-1.row-2"  htmlTag="div" htmlClass="row contact" >
+                        <block   name="footer.content.contact"   class="Magento\Cms\Block\Block">
+                            <arguments>
+						        <argument name="block_id" xsi:type="string">contact</argument>
+						    </arguments>
+                        </block>
+                    </container>
+                    <container   name ="custom.footer.coloumn-1.row-3"  htmlTag="div" htmlClass="row icons" >
+                        <block   name="footer.content.icons"   class="Magento\Cms\Block\Block">
+                            <arguments>
+						        <argument name="block_id" xsi:type="string">social_icons</argument>
+						    </arguments>
+                        </block>
+                    </container>
+                </container>
+
+                <container   name ="custom.footer.coloumn-2"  htmlTag="div" htmlClass="col col-lg-3 col-md-12 col-sm-12 full-height" >
+                    <container   name ="custom.footer.coloumn-2.row-1"  htmlTag="div" htmlClass="row my_account" >
+                        <block   name="footer.content.myaccount"   class="Magento\Cms\Block\Block">
+                            <arguments>
+						        <argument name="block_id" xsi:type="string">my_account</argument>
+						    </arguments>
+                        </block>
+                    </container>
+                    <container   name ="custom.footer.coloumn-2.row-2"  htmlTag="div" htmlClass="row company_info" >
+                        <block   name="footer.content.company.info"   class="Magento\Cms\Block\Block">
+                            <arguments>
+						        <argument name="block_id" xsi:type="string">company_info</argument>
+						    </arguments>
+                         </block>
+                    </container>
+                </container>
+
+                 <container   name ="custom.footer.coloumn-3"  htmlTag="div" htmlClass="col col-lg-3 col-md-12 col-sm-12 services full-height">
+                    <block name="footer.content.service"   class="Magento\Cms\Block\Block">
+                        <arguments>
+						    <argument name="block_id" xsi:type="string">services</argument>
+						</arguments>
+                    </block>
+                </container>
+
+                <container   name ="custom.footer.coloumn-4"  htmlTag="div" htmlClass="col col-lg-3 col-md-12 col-sm-12 help full-height">
+                    <block name="footer.content.help" class="Magento\Cms\Block\Block">
+                        <arguments>
+						    <argument name="block_id" xsi:type="string">help</argument>
+						</arguments>
+                    </block>
+                </container>
+
+            </container>
+        </referenceContainer>
+        <referenceContainer name="before.body.end" remove="true"/>
+   
+    </body>
+</page>
