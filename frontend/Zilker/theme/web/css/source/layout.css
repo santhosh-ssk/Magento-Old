@@ -1,5 +1,5 @@
-.promotional-product,.block-products-list,.slider{
-    width: 90vw;
+.promotional-product,.block-products-list,.slider,#footer{
+    width: 95vw;
     margin-left: auto;
     margin-right: auto;
 }
@@ -10,8 +10,10 @@
     padding: unset;
 }
 /* Extra small devices (phones) */
-@media (max-width: 600px) {
-    .promotional-product,.block-products-list,.slider{
-        width: 85vw;
+@media (max-width: 756px) {
+    .promotional-product,.block-products-list,.slider,#footer{
+        width: 90vw;
     }    
+    
+
 } 

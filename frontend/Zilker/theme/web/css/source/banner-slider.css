@@ -1,5 +1,4 @@
 .slider{
-    background-color: black;
     position: relative;
 }
 
@@ -21,10 +20,10 @@
     background-image: url('../../images/next.png');
 }
 .slick-dots{
-    margin-top: 10%;
+    bottom: -40px;
 }
 .slick-dots li{
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 50%;
 } 
 .slick-dots li button{

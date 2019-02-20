@@ -117,22 +117,22 @@
         ], function ($) {
             jQuery(document).ready(function () {
                 jQuery(".widget-product-grid").slick({
-                    infinite: true,
+                    infinite: false,
                     speed: 300,
-                    slidesToShow: 4,
+                    slidesToShow: 5,
                     slidesToScroll: 1,
                     prevArrow:'<span class="slick-prev custom-slick-prev"></span>',
                     nextArrow:'<span class="slick-next custom-slick-next"></span>',
                     responsive: [
                         {
-                            breakpoint: 1200,
+                            breakpoint: 1000,
                             settings: {
                                 slidesToShow: 3,
                                 slidesToScroll: 1
                             }
                         },
                         {
-                            breakpoint: 800,
+                            breakpoint: 700,
                             settings: {
                                 slidesToShow: 2,
                                 slidesToScroll: 1

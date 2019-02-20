@@ -1,0 +1,153 @@
+.page-footer{
+    background-color: #eee;
+    margin-top: unset;
+    text-align: center;
+}
+.columns .column.main{
+    padding-bottom: unset;
+}
+
+.contact,.company_info {
+    margin-top: 30px;
+    
+}
+.icons{
+    margin-top: 40px;
+    text-align: left;
+}
+.title{
+    font-weight: bold;
+    margin: 10px 0px;
+}
+.footer ul{
+    list-style: none;
+    margin: unset;
+    padding: unset;
+}
+.demco_logo{
+    text-align: left;
+}
+.demco_logo img{
+    padding: 10px 0px;
+    width:  15vw;
+    box-sizing: border-box;
+}
+.icons li{
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    border-radius: 50%;
+    
+}
+.icons li:nth-child(1){
+    padding: 3px 12px;
+    background-color: #571c9e;
+}
+.icons li:nth-child(2){
+    padding: 3px 9px;
+    background-color: #628df7;
+}
+.icons li:nth-child(3){
+    padding: 3px 9px;
+    background-color: #c80000;
+}
+.icons li:nth-child(4){
+    padding: 3px 9px;
+    background-color: #394fb9;
+}
+.icons li:nth-child(5){
+    padding: 5px 7px;
+    font-size: 18px;
+    background-color: #f20000;
+}
+
+.title{
+    position: relative;
+
+}
+.close{
+    position: absolute;
+    right:  1%;
+    display: none;
+    z-index: 10;
+    /* padding: 10px; */
+    top: 50%;
+    transform: translate(0%,-50%);
+}
+.close:hover{
+    cursor: pointer;
+}
+
+.minus{
+    display: none;
+}
+.contact ,.company_info ,.my_account,.help,.services{
+    text-align: left;
+}
+.contact >ul.show, .company_info  >ul.show,.my_account  >ul.show,.help  >ul.show,.services  >ul.show {
+    display: block;
+    
+}
+
+.close.show > .minus{
+    display: block;
+}
+.close.show > .plus{
+    display: none;
+}
+#footer{
+    position: relative;
+}
+#footer .copyrights{
+    width: 70%;
+    margin-top: 10px;
+}
+@media (max-width: 756px){
+     .contact >ul,.company_info >ul,.my_account >ul,.help >ul,.services >ul{
+        display: none;
+        margin-top: 10px;
+        
+    } 
+    .icons{
+        display: none;
+    }
+    .close{
+        display: block;
+    }
+    .demco_logo{
+        text-align: left;
+    }
+    .demco_logo img{
+         width:  35vw; 
+    }
+    .title{
+        padding: 10px 0px;
+        text-align: left;
+        border-bottom: 0.5px solid grey;
+    }
+    .title:hover{
+        cursor: pointer;
+    }
+    .icons{
+        display: block;
+        position:absolute;
+        bottom: 0%;
+        left: 50%;
+        width: 80vw;
+        text-align: center;
+        z-index: 10;
+        transform: translate(-50%,0%);
+    }
+    #footer{
+        padding-bottom: 120px;        
+    }
+    #footer .copyrights{
+        margin-top: unset;
+        margin-left: auto;
+        margin-right: auto; 
+    }
+    .title,.row{
+        margin: unset;
+    }
+
+}
