@@ -12,6 +12,18 @@
     //simple text
 ?>
 <hr>
+<?php
+    $_product = $block->getProduct();
+?>
+
+<?php if ($_product->getAttributeText('is_quantity_low') == 'Yes'): ?>
+        <div style="margin: 20px 0px">
+            <?php 
+                echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('hurry_up')->toHtml(); 
+            ?>
+        </div>
+<?php endif;?>
+
 <p><strong> This is custom text about product from html page</strong></p>
 
 
@@ -24,9 +36,6 @@
 
 
 
-<?php
-    $_product = $block->getProduct();
-?>
 
 <?php if ($_product->getShortDescription()): ?>
         <div style="margin: 20px 0px">
