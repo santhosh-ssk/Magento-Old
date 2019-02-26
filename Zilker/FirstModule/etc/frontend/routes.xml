@@ -12,5 +12,8 @@
         <route id="testpage" frontName="testpage">
             <module name="Zilker_FirstModule" />
         </route>
+        <route id="customer" frontName="customer">
+            <module name="Zilker_FirstModule" />
+        </route>
     </router>
 </config>

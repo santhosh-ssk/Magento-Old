@@ -1,0 +1,25 @@
+<config>
+    <!-- <type name="Magento\Customer\Model\Data\Customer">
+      <plugin name="customer-firstname-log" type="\Zilker\FirstModule\Plugin\CustomerFirstNameLog" sortOrder="1" disabled="false" />
+    </type> -->
+
+    <type name="Magento\Checkout\Model\Cart">
+      <plugin name="cart-products-log" type="\Zilker\FirstModule\Plugin\CartProductsLog" sortOrder="1" disabled="false" />
+    </type>
+
+    <type name="Zilker\FirstModule\Controller\Page\Index">
+      <plugin name="render-module-name" type="\Zilker\FirstModule\Plugin\RenderModuleName" sortOrder="1" disabled="false" />
+    </type>
+
+    <type name="\Magento\Catalog\Helper\Product">
+      <plugin name="change-product-price" type="\Zilker\FirstModule\Plugin\ChangeProductPrice" sortOrder="1" disabled="false" />
+    </type>
+
+    <type name ="\Magento\Checkout\Controller\Index\Index">
+      <plugin name="welcome-customer-cart-page" type="\Zilker\FirstModule\Plugin\welcomeCustomerCartPage" sortOrder="1" disabled="false" />
+    </type>
+
+  <preference for="Magento\Customer\Controller\Account\LoginPost"   type="\Zilker\FirstModule\Controller\Login\Post" />
+  <preference for="Magento\AdvancedCheckout\Controller\Sku\UploadFile"   type="Zilker\FirstModule\Controller\Customer\Order\Sku\Filter" />
+
+</config>
