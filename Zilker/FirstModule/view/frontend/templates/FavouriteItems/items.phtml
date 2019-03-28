@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @var \Zilker\FirstModule\Block\Customer\FavouriteItems\Items $block
+ */
+
+  $items = $block->getFavouriteItems();
+//   var_dump($items);
+?>
+<div class="products-container">
+    <?php foreach($items as $item): ?>
+        <div class="product" id="product-<?= $item->getId()?>">
+            <div class="image"><a  href="<?= $item->getProductUrl()?>"><img src="<?= $block->getBaseUrl().'pub/media/catalog/product'. $item->getImage() ?>" /></a></div>
+            <div class="name"><?= $item->getName() ?></div>
+            <div class="price"><b>Price: </b><?= $item->getPrice() ?></div>
+            <button class="delete" onclick="removeProduct(<?= $item->getId()?>)">Delete</button>
+        </div>
+    <?php endforeach?>
+</div>

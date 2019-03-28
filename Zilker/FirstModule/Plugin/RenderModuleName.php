@@ -16,6 +16,7 @@
         public function beforeExecute(\Zilker\FirstModule\Controller\Page\Index $index)
         {
             echo "This is from module Zilker\FirstModule";
+            $this->logger->info('module name');
         }
     }
 ?>

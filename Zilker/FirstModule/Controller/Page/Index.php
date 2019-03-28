@@ -8,16 +8,19 @@ class Index extends \Magento\Framework\App\Action\Action
 {
 
     protected $pageFactory;
+    protected $_messageManager;
     /**
      * @param \Magento\Framework\App\Action\Context $context
      * @param \Magento\Framework\View\Result\PageFactory $pageFactory
      */
     public function __construct(
        \Magento\Framework\App\Action\Context $context,
-       \Magento\Framework\View\Result\PageFactory $pageFactory)
+       \Magento\Framework\View\Result\PageFactory $pageFactory,
+       \Magento\Framework\Message\ManagerInterface $messageManager)
        {
-              $this->pageFactory = $pageFactory;
-		return parent::__construct($context);
+         $this->pageFactory     = $pageFactory;
+         $this->_messageManager = $messageManager;
+		   return parent::__construct($context);
        }
     /**
      * Index  page action
@@ -26,6 +29,7 @@ class Index extends \Magento\Framework\App\Action\Action
      */
     public function execute()
     {
+       $this->_messageManager->addError('hi');
        return $this->pageFactory->create();
     } 
 }

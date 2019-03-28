@@ -6,19 +6,21 @@
 namespace Zilker\FirstModule\Controller\Page;
 class HelloWorld extends \Magento\Framework\App\Action\Action
 {
-    /**
-     * @var \Magento\Framework\Controller\Result\JsonFactory
-     */
-    protected $resultJsonFactory;
+
+       protected $_resultJsonFactory;
+       
+
     /**
      * @param \Magento\Framework\App\Action\Context $context
      * @param \Magento\Framework\Controller\Result\JsonFactory $resultJsonFactory
+     * 
      */
     public function __construct(
        \Magento\Framework\App\Action\Context $context,
-       \Magento\Framework\Controller\Result\JsonFactory $resultJsonFactory)
+       \Magento\Framework\Controller\Result\JsonFactory $resultJsonFactory
+     )
 {
-       $this->resultJsonFactory = $resultJsonFactory;
+       $this->_resultJsonFactory = $resultJsonFactory;
        parent::__construct($context);
 }
     /**
@@ -28,22 +30,11 @@ class HelloWorld extends \Magento\Framework\App\Action\Action
      */
     public function execute()
     {
-       $result = $this->resultJsonFactory->create();
-       $data = ['message' => 'Hello world!'];
+      $response    = $this->_resultJsonFactory->create();
+      $responseObj = ["isSuccess" => false , "message" => "Hi"];  
+      $response->setData($responseObj);
+       return $response;
+    }
 
-       return $result->setData($data);
-       }
-
-   /**
-     * HelloWorld  page action
-     *
-     * @return \Magento\Framework\Controller\ResultInterface
-     */
-    public function add()
-    {
-       $result = $this->resultJsonFactory->create();
-       $data = ['message' => 'add function'];
-       return $result->setData($data);
-       }
 }
 ?>

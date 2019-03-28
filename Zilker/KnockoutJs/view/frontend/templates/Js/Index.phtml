@@ -1,0 +1,34 @@
+<?php
+/**
+ * @var \Zilker\KnockoutJs\Block\Customer\Share\Items $block
+ */
+    $name = $block->getCustomer();
+    // echo $items;
+?>
+<!-- ko scope: 'custom.page' -->
+    
+    <input type="text" value="<?=$name ?>" /> 
+    <br/><br/><br/>
+    
+    <span><b>Add Contacts:</b>&emsp;</span>
+    <button data-bind="click: addContact">Add</button>
+    <br/><br/><br/>
+
+    <!-- ko foreach: contacts -->
+        <input type="text" />&emsp;<button data-bind="click: $parent.deleteContact">Delete</button>
+    <!-- /ko -->
+
+<!-- /ko -->
+<script type="text/x-magento-init"> 
+{ 
+    "*": { 
+        "Magento_Ui/js/core/app": { 
+            "components": { 
+                "custom.page": {
+                     "component": "Zilker_KnockoutJs/Js/items"
+                      }
+                 }
+             }
+         } 
+} 
+</script>

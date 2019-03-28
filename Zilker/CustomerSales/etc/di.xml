@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    
+    <virtualType name="customOrderGridCollection" type="Magento\Sales\Model\ResourceModel\Order\Grid\Collection">
+        <arguments>
+            <argument name="resourceModel" xsi:type="string">\Zilker\CustomerSales\Model\ResourceModel\Order</argument>
+        </arguments>
+    </virtualType>
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="sales_order_grid_data_source" xsi:type="string">customOrderGridCollection</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
+

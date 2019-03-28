@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework-message-queue:etc/queue.xsd">
+    <topic name="productImport.topic" request="string" />
+    <topic name="same" request="string" />
+    <topic name="customer-order-products-topic" request="string" />
+</config>

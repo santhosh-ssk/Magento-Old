@@ -1,0 +1,114 @@
+<!-- ko scope: 'custom.page' -->
+
+<!-- Vissible knockout visible bindings -->
+<div data-bind="visible: shouldShowMessage">
+    You will see this message only when "shouldShowMessage" holds a true value.
+</div>
+
+<!-- Html Bindings -->
+<div data-bind="html: details"></div>
+
+
+<!-- Text Binding -->
+Today's message is: <span data-bind="text: myMessage"></span>
+<input type='text' data-bind="value: myMessage"/>
+
+<!-- Class Binding -->
+<div data-bind="class: getClass">
+   class Binding
+</div>
+ 
+<!-- Css Bindings, Adds a class when it satisfies the oberserver return true  -->
+<!-- my-class  is illigal  use 'my-class'-->
+<div data-bind="css: {'success': isSuccess}">
+   Success Message from Css Bindings
+</div>
+
+
+<!-- Style Bindings -->
+<div data-bind="style: { color: showColor}">
+   Message from Style Binding
+</div>
+
+<!-- The "attr" binding -->
+<a data-bind="attr: { href: url, title: details }">
+    Attribute Binding
+</a>
+
+
+<!-- Observable Arrays -->
+<select data-bind="options: items" ></select>
+<select data-bind="options: Objitems, optionsText: function(item){return item.name},optionsValue: function(item){return item.value} " ></select>
+
+<!-- For Each bindings -->
+<strong>For Each Bindings</strong>
+<br/><br/><br/>
+<table border=1>
+    <thead >
+        <tr data-bind="foreach: columns">
+            <th><span data-bind="text: $data"></span></th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: tabledata">
+        <tr>
+            <td data-bind="text: firstName"></td>
+            <td data-bind="text: lastName"></td>
+            <td data-bind="text: firstName + ' '+lastName"></td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr style="text-align:center">
+            <td colspan = 3>Using with 'as'</td>
+        </tr>
+    </tbody>
+    <tbody data-bind="foreach: {data: tabledata, as : 'person' }">
+        <tr>
+            <td data-bind="text: person.firstName"></td>
+            <td data-bind="text: person.lastName"></td>
+            <td data-bind="text: person.firstName + ' '+person.lastName"></td>
+        </tr>
+    </tbody>
+</table>
+
+<table border=1>
+    <thead >
+        <tr>
+            <th>Category</th>
+            <th>Items</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- ko foreach: categories -->
+            <tr>
+                <td data-bind="text: $data.name,attr:  {rowspan: $data.items.length}" ></td>
+                <td data-bind="text: $data.items[0]"></td>
+            </tr>
+            <!-- ko foreach: $data.items.slice(1) -->
+                <tr>
+                    <td data-bind="text: $data"  ></td>
+                </tr>
+            <!-- /ko -->
+        <!-- /ko -->
+    </tbody>
+</table>
+
+<button data-bind="click: addCategoryItem">Add Item</button>
+<br/><br/><br/>
+<ul data-bind="foreach: columns">
+    <li>Table Columns: <b data-bind="text: $data"></b> at Position: <b data-bind="text: $index"></b></li>
+</ul>
+<!-- /ko -->
+
+<script type="text/x-magento-init"> 
+{ 
+    "*": { 
+        "Magento_Ui/js/core/app": { 
+            "components": { 
+                "custom.page": {
+                     "component": "Zilker_FirstModule/js/share"
+                      }
+                 }
+             }
+         } 
+} 
+</script>

@@ -3,5 +3,4 @@
     <event name="customer_register_success">
         <observer name="customer_register_success" instance="Zilker\FirstModule\Observer\CustomerRegisterObserver" />
     </event>
-    
 </config>

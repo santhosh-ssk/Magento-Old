@@ -6,14 +6,14 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
     <router id="standard">
-        <route id="test" frontName="test">
+        <!-- <route id="test" frontName="test">
             <module name="Zilker_FirstModule" />
-        </route>
+        </route> -->
         <route id="testpage" frontName="testpage">
             <module name="Zilker_FirstModule" />
         </route>
-        <route id="customer" frontName="customer">
+        <!-- <route id="customer" frontName="customer">
             <module name="Zilker_FirstModule" />
-        </route>
+        </route> -->
     </router>
 </config>

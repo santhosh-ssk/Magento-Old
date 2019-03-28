@@ -28,27 +28,11 @@ class SalesOrder implements \Magento\Framework\Event\ObserverInterface
             $product = $item->getProduct();
             $typeId  = $product->getTypeId();
             $skuId      = $product->getSku();
-            $this->logger->info('Product : '.$skuId.',type: '.$typeId);
             if($typeId == 'configurable'){
                 continue;
             }
-            //$this->logger->info('Product canConfigure: '.$product->canConfigure().' isComposite: '.$product->isComposite());
-            $quantity = $product->getQuantityAndStockStatus()['qty'];
-            $parentId = $this->configurable->getParentIdsByChild($product->getId());
-              if($quantity<100){
-                 if(count($parentId)>0){
-                     //parent exist
-                     $parentId = $parentId[0];
-                     $product = $this->_productRepositoryInterface->getById($parentId);
-                     $canconfigurable = $product->canConfigure();
-                     if(!$canconfigurable){
-                         continue;
-                     }
-                    }
-                 $product->setCustomAttribute('is_quantity_low',1);
-                 $this->_productRepositoryInterface->save($product);
-                 $this->logger->info('Product : '. $product->getSku() . ' is set low ');
-            }
+            
+            $this->logger->info('Product : '.$skuId.',type: '.$typeId);     
         }
         
     }

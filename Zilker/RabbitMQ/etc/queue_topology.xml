@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+    <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework-message-queue:etc/queue_topology.xsd">
+        <exchange name="product-import-exchange1" type="topic" connection="amqp">
+            <binding id="productImportBinding1" topic="productImport.topic" destinationType="queue" destination="productImport-queue"/>
+        </exchange>
+        
+        <exchange name="same" type="topic" connection="amqp">
+            <binding id="same" topic="same" destinationType="queue" destination="same"/>
+        </exchange>
+
+        <exchange name="customer-order-products-exchange" type="topic" connection="amqp">
+            <binding id="customer-order-products-binding" topic="customer-order-products-topic" destinationType="queue" destination="customer-order-products-queue"/>
+        </exchange>
+    </config>

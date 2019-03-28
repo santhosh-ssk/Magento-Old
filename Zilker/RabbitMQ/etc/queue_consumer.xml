@@ -1,0 +1,5 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework-message-queue:etc/queue_consumer.xsd">
+    <consumer name="productimport.consumer.one" queue="productImport-queue" connection="amqp" handler="Zilker\RabbitMQ\Consumer\TestConsumer::processMessage"/>
+    <consumer name="same" queue="same" connection="amqp" handler="Zilker\RabbitMQ\Consumer\TestConsumer::processMessage"/>
+    <consumer name="customer-order-products-consumer" queue="customer-order-products-queue" connection="amqp" handler="Zilker\RabbitMQ\Consumer\CustomerOrderProducts::processMessage"/>
+</config>
