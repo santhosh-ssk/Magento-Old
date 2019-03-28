@@ -1,0 +1,26 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+/** @var $block Magento\Catalog\Block\Product\ProductList\Item\AddTo\Compare */
+?>
+<a href="#"
+   class="action tocompare"
+   title="<?= $block->escapeHtml(__('Add to Compare')) ?>"
+   aria-label="<?= $block->escapeHtml(__('Add to Compare')) ?>"
+   data-post='<?= /* @escapeNotVerified */ $block->getCompareHelper()->getPostDataParams($block->getProduct()) ?>'
+   role="button">
+    <span><?= /* @escapeNotVerified */ __('Add to Compare') ?></span>
+</a>
+
+<a class="action tofavourite"
+   title="<?= $block->escapeHtml(__('Add to Favorites')) ?>"
+   aria-label="<?= $block->escapeHtml(__('Add to Favorites')) ?>"
+   role="button"
+   onclick = "addToFavorites(<?= $block->getProduct()->getId()?>)"
+   >
+    <span><?= /* @escapeNotVerified */ __('Add to Favorites') ?></span>
+</a>

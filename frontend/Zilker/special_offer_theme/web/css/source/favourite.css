@@ -1,0 +1,9 @@
+.product-item .tofavourite::before {
+    font-size: 20px;
+    opacity: 0.8;
+    content: '\e605';
+}
+.product-item .tofavourite:hover{
+    opacity: 1.0;
+    cursor: pointer;
+}

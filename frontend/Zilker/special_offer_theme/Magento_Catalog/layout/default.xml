@@ -6,6 +6,11 @@
  */
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css     src="css/source/favourite.css"/>
+        <script  src="js/favorites.js"/>
+        <css     src="https://use.fontawesome.com/releases/v5.7.2/css/all.css" src_type="url"/>
+    </head>
     <body>
         <referenceContainer name="sidebar.additional" remove="true">
         </referenceContainer>

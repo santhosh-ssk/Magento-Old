@@ -1,0 +1,36 @@
+.data-grid-wrap .cell-label-line-description,.action-select{
+    display: none;
+}
+.data-grid-th.data-grid-actions-cell.actions-field{
+    text-align: center;
+}
+
+td.data-grid-actions-cell.actions-field {
+    text-align: right;
+}
+
+.action-menu-item{
+    color: white !important;
+    background: #427f87;
+    padding: 6px 20px;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.action-menu {
+    list-style: none;
+}
+.action-menu > li{
+ display: inline-block;
+}
+
+.action-menu > li >a[data-action="item-delete"]{
+    color: white !important;
+    background: red;
+    padding: 6px 10px;
+    margin-left: 10px;
+    box-sizing: border-box;
+}
+.action-select-wrap,.action-menu{
+    width: 150px;
+}
